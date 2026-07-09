@@ -18,6 +18,5 @@ This project focuses on integrating clinical, mRNA gene expression, and mutation
 * **Steps:** The raw mutation data was processed and converted into a binary matrix (0/1) to identify the presence or absence of gene mutations across patient samples.
 * **Result:** Generated a clear `processed_mutation_matrix.csv` file, providing a detailed mutation profile for each patient.
 
-## **Data Access**
-The processed datasets can be downloaded from the release section of this repository:
-* **[Insert your Release Link here]**
+## **Data**
+The processed datasets available in the release section of this repository
