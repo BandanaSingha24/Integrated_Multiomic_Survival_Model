@@ -1,12 +1,16 @@
 
-# Integrated Multiomic Survival Model
+ # Integrated Multiomic Survival Model
 
 ### **Module 2: Feature Engineering**
+
 * **Step 1 (Cleaning):** Removed missing values and non-informative rows/columns.
 * **Result:** Ensured data integrity by eliminating null entries and noise.
+
 * **Step 2 (Log Transformation):** Applied log2 normalization to standardize gene expression distributions.
 * **Result:** Converted skewed expression values into a normal distribution suitable for modeling.
+
 * **Step 3 (Variance Filtering):** Filtered out low-variance genes using a predefined threshold.
 * **Result:** Reduced complexity from ~20,000 to 20,511 highly informative genes.
+
 * **Step 4 (Standardization):** Applied StandardScaler to scale all genes to a mean of 0 and standard deviation of 1.
 * **Result:** Generated the finalized `processed_expression_matrix.csv.gz`.
