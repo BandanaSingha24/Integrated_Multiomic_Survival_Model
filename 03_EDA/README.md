@@ -29,8 +29,8 @@ This module focuses on the Exploratory Data Analysis (EDA) of clinical and gene 
 
 ### PART 1: MUTATION EDA & EXPLORATORY DATA ANALYSIS
 * **Step 1 (Data Prep)**: Loaded 'data_mutations.txt' and performed essential data cleaning.
-* **Step 2 (Top Mutated Genes)**: Identified top 10 genes; PIK3CA confirmed as the primary driver (Hero Gene).## Step 3 (TMB Calculation): ## ##  * **step 3 (TMB Calculation)**  Calculated Tumor Mutational Burden (TMB) to assess genomic instability.
-* **Step 4 (Onco-Plot & Visualization)**: Generated Onco-Plots to visualize mutation frequency and types.*# **tep 5 (Sample Statistics)**: Performed sample-level analysis to understand mutation burden variations.
+* **Step 2 (Top Mutated Genes)**: Identified top 10 genes; PIK3CA confirmed as the primary driver (Hero Gene).## Step 3 (TMB Calculation): ## ##  * **step 3 (TMB Calculation)**: Calculated Tumor Mutational Burden (TMB) to assess genomic instability.
+* **Step 4 (Onco-Plot & Visualization)**: Generated Onco-Plots to visualize mutation frequency and types.*# **tep 5 (Sample Statistics)**:                    Performed sample-level analysis to understand mutation burden variations.
 * **Result**s: Established a comprehensive landscape of the cancer genomic profile.
 
 ### PART 2: ADVANCED PROFILING & FEATURE ENGINEERING
@@ -38,5 +38,5 @@ This module focuses on the Exploratory Data Analysis (EDA) of clinical and gene 
 * **Step 2 (Epistatic Pair Feature Engineering)**: Created correlation heatmaps to identify co-occurrence patterns between genes.
 * **Step 3 (Hotspot Analysis)**: Pinpointed critical PIK3CA hotspots, specifically p.H1047R and p.E545K.
 * **Step 4 (Functional & Structural Mapping)**: Analyzed biological impacts of variants and their structural implications.
- **Step 5 (Data Export)**: Exported processed datasets (epistatic_pairs.csv, functional_mutation_impact.csv) for future use.
+* **Step 5 (Data Export)**: Exported processed datasets (epistatic_pairs.csv, functional_mutation_impact.csv) for future use.
 * **Results**: Established a robust structural/functional mutation profile, providing a foundation for Module 7 integration.  
