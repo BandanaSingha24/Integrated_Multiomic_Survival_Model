@@ -1,26 +1,25 @@
+# Module 2: Multi-Omics Feature Engineering & Scalability Alignments
 
- # Integrated Multiomic Survival Model
+This module transforms processed multi-omics data into machine-learning-ready tensors by executing categorical encodings, high-dimensional variance scaling, and domain-specific biomarker extraction.
 
-### **Module 2: Gene Expression Feature Engineering Data**
+## 1. Clinical Feature Engineering
+* **Categorical Standardization:** Corrected text incongruencies (e.g., standardizing mixed formats like "Pos" and "Positive") within critical hormone receptor annotations.
+* **Encoding Strategies:** 
+  * Applied binary map encoding (0/1) to dual-state clinical tracks (CHEMOTHERAPY, HORMONE_THERAPY).
+  * Deployed One-Hot Encoding (pd.get_dummies with reference drop) to multi-class variables (CELLULARITY, HER2_STATUS, ONCOTREE_CODE, SAMPLE_TYPE) to eliminate artificial weight rankings during backpropagation.
+* **Z-Score Scaling:** Normalized divergent continuous ranges (LYMPH_NODES_EXAMINED_POSITIVE, NPI, TUMOR_SIZE) using StandardScaler to bring feature variances to 1 and means to 0.
+* **[RESULTS]:** 
+  * Core clinical frame fully converted. Datatype audit confirmed that *only ['PATIENT_ID'] remains as a non-numeric string column*, making the dataframe 100% compliant for multi-omics array concatenation.
 
-* **Step 1 (Cleaning):** Removed missing values and non-informative rows/columns.
-* **Result:** Ensured data integrity by eliminating null entries and noise.
+## 2. Somatic Mutation Feature Engineering
+* **Biomarker Synthesis (TMB Proxy):** Retained individual binarized gene flags for deep interaction learning while engineering a high-utility *Tumor Mutational Burden (TMB)* proxy metric by aggregating raw mutation counts per patient profile. This bridges computer science scalability with translational oncology.
+* **[RESULTS]:** 
+  * New engineered feature added. Final Mutation matrix shape expanded from 174 columns to *(2358, 175)* to safely accommodate the TUMOR_MUTATIONAL_BURDEN continuous scoring metric.
 
-* **Step 2 (Log Transformation):** Applied log2 normalization to standardize gene expression distributions.
-* **Result:** Converted skewed expression values into a normal distribution suitable for modeling.
-
-* **Step 3 (Variance Filtering):** Filtered out low-variance genes using a predefined threshold.
-* **Result:** Reduced complexity from ~20,000 to 20,511 highly informative genes.
-
-* **Step 4 (Standardization):** Applied StandardScaler to scale all genes to a mean of 0 and standard deviation of 1.
-* **Result:** Generated the finalized `processed_expression_matrix.csv.gz`.
-
-###  *** Mutation Feature Engineering Module Data ***
-
-* **Step 1: Data Cleaning & Pre-processing**
- * **Step:** Removed redundant columns and handled missing values to ensure data quality.
- * **Result:** The dataset is now noise-free and optimized for high-quality computational oncology analysis.
-
-* **Step 2: Binary Matrix Transformation**
- * **Step:** Transformed mutation data into a binary matrix format (1: present, 0: absent).
- * **Result:** The data is now in a standardized format required for Machine Learning and Deep Learning models.
+## 3. Transcriptomics Feature Engineering
+* **Biological Noise Elimination:** Screened the expression header space to detect and drop non-protein coding RNA loci and uncharacterized genomic regions (specifically *LOC* prefix genes) that lack functional annotation, significantly improving the signal-to-noise ratio.
+* **Continuous Variance Scaling:** Centred and scaled the remaining highly dynamic gene signatures using Z-score transformations, ensuring high-baseline expressions do not disproportionately dominate downstream multi-omics model weights.
+* **[RESULTS]:** 
+  * Filtering algorithm dropped 4 non-protein-coding unannotated features.
+  * Final finalized Transcriptomics shape locked at *(1980, 538)*, yielding 537 clean, z-score standardized, protein-coding gene expression features ready for integration.
+ 
