@@ -2,8 +2,9 @@
 
 An enterprise-grade, end-to-end computational framework designed to integrate high-dimensional multi-omics datasets, perform robust feature engineering, and isolate actionable molecular targets for stratified clinical trial design and drug discovery.
 
-## Primary Dataset
-Built and validated using multi-omics clinical and molecular profiling data sourced from **TCGA (The Cancer Genome Atlas)** via **cBioPortal** (specifically targeting breast cancer cohorts).
+## 📊 Primary Dataset & Data Modalities
+Built and validated using multi-omics clinical and molecular profiling data sourced from **TCGA (The Cancer Genome Atlas) via cBioPortal** (specifically targeting breast cancer cohorts).
+* **Data Modalities Handled:** Transcriptomic (RNA-Seq expression matrices), Genomic (Somatic mutation profiles/variant calling files), and structured longitudinal Clinical Phenotypes (Age, Tumor Grade, Treatment Regimens, Overall Survival metrics).
 
 
 ## 🚀 Industrial Utility & Translation Link
