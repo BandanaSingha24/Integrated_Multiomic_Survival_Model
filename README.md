@@ -15,11 +15,15 @@ This repository delivers production-ready computational assets engineered to int
 
 ## 📂 Repository Architecture & Module Development Status
 
-### 🔹 Module 01: Python Foundation for Bioinformatics
+### 🔹 Module 01: Multi-Omics Data Ingestion & Structuring
 * **Status:** Complete ✅
-* **Core Focus:** High-performance processing architectures for large-scale genomic sequence and expression profiles.
-* **Key Features:** Object-oriented file parsers (FASTQ/BAM metadata processing), vectorized expression matrix manipulations using NumPy/Pandas, and memory-optimized data structures for high-throughput biological data.
+* **Core Focus:** Establishing robust data ingestion pipelines for multi-dimensional clinical and molecular profiling cohorts.
+* **Key Features:** 
+  * Automated loading and harmonization of multi-omics matrices (transcriptomics, somatic mutations, and clinical attributes) sourced from **TCGA via cBioPortal**.
+  * Memory-optimized data structures using `NumPy`/`Pandas` for high-throughput matrix manipulations.
+  * Clinical data parsing, missing-value handling, and sample ID synchronization across diverse omics layers.
 
+ 
 ### 🔹 Module 02: Advanced Feature Engineering
 * **Status:** Complete ✅
 * **Core Focus:** Transforming raw, noisy molecular vectors into high-signal inputs optimized for non-linear machine learning architectures.
