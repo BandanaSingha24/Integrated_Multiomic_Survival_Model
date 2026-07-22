@@ -2,6 +2,10 @@
 
 An enterprise-grade, end-to-end computational framework designed to integrate high-dimensional multi-omics datasets, perform robust feature engineering, and isolate actionable molecular targets for stratified clinical trial design and drug discovery.
 
+## Primary Dataset
+Built and validated using multi-omics clinical and molecular profiling data sourced from **TCGA (The Cancer Genome Atlas)** via **cBioPortal** (specifically targeting breast cancer cohorts).
+
+
 ## 🚀 Industrial Utility & Translation Link
 This repository delivers production-ready computational assets engineered to interface with the R&D pipelines of elite South Korean biotechnology and pharmaceutical firms partnered with POSTECH and KAIST (such as Samsung Biologics, Geninus, or SK Bioscience).
 * **De-risking Drug Discovery:** Accelerating target identification through pre-validated, independent co-expression modules (e.g., GLI3/BBOF1), mitigating multi-million-dollar wet-lab failure rates.
